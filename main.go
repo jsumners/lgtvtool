@@ -105,7 +105,6 @@ func main() {
 	log.Debug("...television dialed")
 
 	log.Debug("sending request for service menu")
-	//msg := `{"id": "something_0", "type": "request", "uri":"ssap://com.webos.applicationManager/launch", "payload": { "id": "com.webos.app.factorywin", "params": { "id": "executeFactory", "irKey": "inStart" }}}`
 	cmd, err := json.Marshal(NewServiceMenuCommand(0))
 	if err != nil {
 		log.Error("Failed to send service menu command.", "error", err)
